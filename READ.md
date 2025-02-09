@@ -53,6 +53,7 @@ def search_books(query, vectorizer, title_vectors, titles):
     similarity = cosine_similarity(query_vec, title_vectors).flatten()
     top_books = titles.iloc[np.argsort(-similarity)[:5]]
     return top_books
+```
 🤝 Recommendation System
 This collaborative filtering approach finds users with similar book preferences and recommends books they haven't read yet.
 
