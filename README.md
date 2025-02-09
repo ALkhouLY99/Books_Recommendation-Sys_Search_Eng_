@@ -27,7 +27,8 @@ The project uses book metadata and user interactions from Goodreads.
 - `goodreads_books.json.gz` → Book details  
 - `goodreads_interactions.csv` → User interactions & ratings  
 - `liked_books.csv` → User-preferred books  
-- `book_id_map.csv` → Maps book IDs to internal indices  
+- `book_id_map.csv` → Maps book IDs to internal indices
+- `books_titles.json`-> to get metdata about books  
 
 ---
 
