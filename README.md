@@ -6,7 +6,7 @@
 
 ## 🚀 Overview  
 This project builds a **`book recommendation system`** and a **`search engine`** using the **Goodreads dataset**.  
-It applies **collaborative filtering** for personalized recommendations and **`TF-IDF` & `Hashing Vectorization`** for efficient book search.  
+It applies **`collaborative filtering`** for personalized recommendations and **`TF-IDF` & `Hashing Vectorization`** for efficient book search.  
 
 ---
 
