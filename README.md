@@ -48,11 +48,52 @@ The search engine processes book titles, applies **TF-IDF & HashingVectorizer**,
 from sklearn.feature_extraction.text import TfidfVectorizer, HashingVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-def search_books(query, vectorizer, title_vectors, titles):
-    query_vec = vectorizer.transform([query.lower()])
-    similarity = cosine_similarity(query_vec, title_vectors).flatten()
-    top_books = titles.iloc[np.argsort(-similarity)[:5]]
-    return top_books
+# Initialize vectorizers
+vectorizer_hash = HashingVectorizer(n_features=2**20, alternate_sign=False)
+vectorizer_tfidf = TfidfVectorizer()
+
+# Precompute document vectors for both vectorizers
+hash_vectors = vectorizer_hash.transform(book_deta['mod_title'])  # For HashingVectorizer
+tfidf_vectors = vectorizer_tfidf.fit_transform(book_deta['mod_title'])  # For TfidfVectorizer
+
+
+# style 
+def enhance_url(val):
+    return '<a target ="_blank" href="{}">GoodReads</a>'.format(val)
+def enahce_imag(val):
+    return '<a target="_blank"> <img src="{}" width =50></a>'.format(val)
+
+# Unified search function
+def search(query, vectorizer=vectorizer_tfidf, document_vectors=tfidf_vectors, titles=book_deta, top_k=5):
+    """
+    Search for books similar to the query using cosine similarity.
+
+    Parameters:
+        query (str): The search query.
+        vectorizer: The vectorizer (HashingVectorizer or TfidfVectorizer).
+        document_vectors: Precomputed vectors for the book titles.
+        titles: DataFrame containing book titles and ratings.
+        top_k (int): Number of top results to return.
+
+    Returns:
+        DataFrame: Top-k books sorted by ratings.
+    """
+    # Preprocess the query
+    processed_query = re.sub("[^a-zA-Z0-9 ]", "", query.lower())
+    
+    # Vectorize the query
+    query_vec = vectorizer.transform([processed_query])
+    
+    # Compute cosine similarity between the query and document vectors
+    similarity = cosine_similarity(query_vec, document_vectors).flatten()
+    
+    # Get indices of top-k most similar books
+    top_indices = np.argsort(similarity)[::-1][:top_k]
+    
+    # Retrieve top-k books and sort by ratings
+    top_books = titles.iloc[top_indices].sort_values("ratings", ascending=False)
+    
+    return top_books.style.format({'url':enhance_url,'cover_image':enahce_imag})
 ```
 🤝 Recommendation System
 This collaborative filtering approach finds users with similar book preferences and recommends books they haven't read yet.
