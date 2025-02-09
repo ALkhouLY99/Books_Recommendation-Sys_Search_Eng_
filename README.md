@@ -42,7 +42,7 @@ The project uses book metadata and user interactions from Goodreads.
 ---
 
 ## 🔍 Search Engine  
-The search engine processes book titles, applies **TF-IDF & HashingVectorizer**, and retrieves similar books using **cosine similarity**.  
+The search engine processes book titles, applies **`TF-IDF` & `HashingVectorizer`**, and retrieves similar books using **cosine similarity**.  
 
 ### 🔹 Implementation:  
 ```python
