@@ -57,12 +57,12 @@ def search_books(query, vectorizer, title_vectors, titles):
 🤝 Recommendation System
 This collaborative filtering approach finds users with similar book preferences and recommends books they haven't read yet.
 
-🔹 How It Works:
-1️⃣ Identify users with similar book preferences
-2️⃣ Find books highly rated by those users
-3️⃣ Recommend books that the target user hasn't read yet
+- 🔹 How It Works:
+- 1️⃣ Identify users with similar book preferences
+- 2️⃣ Find books highly rated by those users
+- 3️⃣ Recommend books that the target user hasn't read yet
 
 🎯 Key Takeaways
-✔️ Hybrid Approach → Combines content-based search & collaborative filtering
-✔️ Efficient Computation → Uses sparse matrices for scalability
-✔️ Scalable & Customizable → Adaptable for different recommendation scenarios
+- ✔️ Hybrid Approach → Combines content-based search & collaborative filtering
+- ✔️ Efficient Computation → Uses sparse matrices for scalability
+- ✔️ Scalable & Customizable → Adaptable for different recommendation scenarios
