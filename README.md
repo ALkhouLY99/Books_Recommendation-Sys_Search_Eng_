@@ -21,7 +21,7 @@ It applies **collaborative filtering** for personalized recommendations and **`T
 
 ## 📂 Dataset  
 The project uses book metadata and user interactions from Goodreads.  
-📥 **Download the dataset** [here](https://datarepo.eng.ucsd.edu/mcauley_group/gdrive/goodreads/).  
+📥 **Download the dataset** [here](https://datarepo.eng.ucsd.edu/mcauley_group/gdrive/goodreads/). 👈
 
 ### Dataset Files:  
 - `goodreads_books.json.gz` → Book details  
