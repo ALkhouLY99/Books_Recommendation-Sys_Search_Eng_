@@ -11,10 +11,10 @@ It applies **collaborative filtering** for personalized recommendations and **TF
 ---
 
 ## 🔥 Features  
-✅ **Book Search Engine**: Uses **`TF-IDF`** & **`HashingVectorizer`** with **cosine similarity** for relevant book searches.  
-✅ **Personalized Recommendations**: Suggests books based on user preferences using **collaborative filtering**.  
+✅ **Book Search Engine**: Uses **`TF-IDF`** & **`HashingVectorizer`** with **`cosine similarity`** for relevant book searches.  
+✅ **Personalized Recommendations**: Suggests books based on user preferences using **`collaborative filtering`**.  
 ✅ **Efficient Filtering**: Filters highly-rated books to enhance recommendation quality.  
-✅ **Optimized for Performance**: Utilizes **sparse matrices** for memory-efficient computations.  
+✅ **Optimized for Performance**: Utilizes **`sparse matrices`**then transform to `compressed-Sparse-Row(CSR)` for memory-efficient computations.  
 ✅ **Interactive Display**: Shows **book titles, covers, ratings, and Goodreads links** for a rich user experience.  
 
 ---
