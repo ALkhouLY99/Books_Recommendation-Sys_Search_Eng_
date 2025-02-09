@@ -1,7 +1,7 @@
 # 📚 Goodreads Book Recommender & Search Engine  
 
 <div align="center">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Goodreads_logo.svg" width="200">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Goodreads_logo.svg" width="200">
 </div>  
 
 ## 🚀 Overview  
