@@ -1,4 +1,4 @@
-# 📚 Goodreads Book Recommender & Search Engine  
+# 📚 Goodreads Book Recommender(collaborative filtering) & Search Engine  
 
 <div align="center">
     <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Goodreads_logo.svg" width="200">
